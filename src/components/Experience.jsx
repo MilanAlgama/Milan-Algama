@@ -1,5 +1,12 @@
 function Experience() {
-  return <div>Experience</div>;
+  return (
+    <section
+      id="experience"
+      className="min-h-screen flex items-center justify-center"
+    >
+      <h2 className="text-5xl font-bold">Experience</h2>
+    </section>
+  );
 }
 
 export default Experience;
