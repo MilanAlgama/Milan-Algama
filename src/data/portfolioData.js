@@ -148,6 +148,36 @@ projects: [
   },
 ],
 
+certificates: [
+  {
+    id: 1,
+    title: "Artificial Intelligence & Machine Learning",
+    issuer: "SLIIT",
+    year: "Completed",
+    status: "Completed",
+    image: "/certificates/AIML-certificate.png",
+    credential: "#",
+  },
+  {
+    id: 2,
+    title: "AWS Cloud Learning",
+    issuer: "Amazon Web Services",
+    year: "In Progress",
+    status: "In Progress",
+    image: "/certificates/aws.png",
+    credential: "#",
+  },
+  {
+    id: 3,
+    title: "Docker Course",
+    issuer: "Udemy",
+    year: "In Progress",
+    status: "In Progress",
+    image: "/certificates/docker.png",
+    credential: "#",
+  },
+],
+
 
 };
 
