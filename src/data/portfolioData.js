@@ -31,6 +31,54 @@ const portfolioData = {
         "Completed Advanced Level in the Physical Science stream.",
     },
   ],
+
+  skills: [
+  {
+    category: "Programming Languages",
+    technologies: [
+      "Java",
+      "Python",
+      "C",
+      "JavaScript"
+    ]
+  },
+
+  {
+    category: "Frontend",
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "HTML",
+      "CSS"
+    ]
+  },
+
+  {
+    category: "Cloud",
+    technologies: [
+      "AWS",
+      "Azure",
+      "Google Cloud"
+    ]
+  },
+
+  {
+    category: "DevOps",
+    technologies: [
+      "Docker",
+      "Git",
+      "GitHub Actions",
+      "CI/CD"
+    ]
+  },
+
+  {
+    category: "Database",
+    technologies: [
+      "MySQL"
+    ]
+  }
+],
 };
 
 export default portfolioData;
