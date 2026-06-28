@@ -79,6 +79,26 @@ const portfolioData = {
     ]
   }
 ],
+
+experience: [
+  {
+    company: "Innodata Lanka Pvt Ltd",
+    position: "Assistant Production",
+    duration: "5 Months",
+    location: "Sri Lanka",
+
+    description:
+      "Worked as an Assistant Production, collaborating with team members in a professional environment while improving communication, teamwork, and problem-solving skills.",
+
+    technologies: [
+      "Teamwork",
+      "Communication",
+      "Problem Solving",
+      "Professional Environment",
+    ],
+  },
+],
+
 };
 
 export default portfolioData;
