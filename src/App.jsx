@@ -1,19 +1,27 @@
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Education from "./components/Education";
+import Skills from "./components/Skills";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import Certificates from "./components/Certificates";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+
 function App() {
   return (
-    <div className="min-h-screen bg-[#050816] flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-6xl font-bold text-blue-500">
-          Milan Harsha
-        </h1>
-
-        <p className="text-gray-300 mt-4 text-xl">
-          ICT Undergraduate | Cloud & DevOps Enthusiast
-        </p>
-
-        <button className="mt-8 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg transition duration-300">
-          Portfolio
-        </button>
-      </div>
+    <div className="bg-[#050816] text-white min-h-screen">
+      <Navbar />
+      <Hero />
+      <About />
+      <Education />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Certificates />
+      <Contact />
+      <Footer />
     </div>
   );
 }
