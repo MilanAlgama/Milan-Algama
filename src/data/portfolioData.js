@@ -99,6 +99,56 @@ experience: [
   },
 ],
 
+projects: [
+  {
+    id: 1,
+    title: "Sales Management System",
+
+    subtitle: "Desktop Management Application",
+
+    description:
+      "A desktop-based Sales Management System developed using Java, JavaFX and MySQL to manage products, customers, inventory and sales efficiently.",
+
+    technologies: [
+      "Java",
+      "JavaFX",
+      "MySQL"
+    ],
+
+    github:
+      "https://github.com/MilanAlgama/SalesManagementSystem",
+
+    image: "/projects/sales-placeholder.png",
+
+    featured: true,
+  },
+
+  {
+    id: 2,
+
+    title: "Logistics Management System",
+
+    subtitle: "Desktop Logistics Solution",
+
+    description:
+      "A Logistics Management System developed to manage deliveries, inventory and logistics operations efficiently using Java and MySQL.",
+
+    technologies: [
+      "Java",
+      "MySQL",
+      "OOP"
+    ],
+
+    github:
+      "https://github.com/MilanAlgama/Logistics-Management-System",
+
+    image: "/projects/logistics-placeholder.png",
+
+    featured: true,
+  },
+],
+
+
 };
 
 export default portfolioData;
