@@ -1,3 +1,6 @@
+import HeroOrbit from "./HeroOrbit";
+import ScrollIndicator from "./ScrollIndicator";
+import { TypeAnimation } from "react-type-animation";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import {
@@ -20,9 +23,7 @@ function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-blue-400 uppercase tracking-[4px]">
-            //Welcome
-          </p>
+          <p className="text-blue-400 uppercase tracking-[4px]">//Welcome</p>
 
           <h1 className="text-6xl lg:text-7xl font-bold mt-4">
             Hi,
@@ -32,18 +33,21 @@ function Hero() {
           </h1>
 
           <h2 className="text-2xl text-gray-300 mt-8">
-            <Typewriter
-              words={[
-                "ICT Undergraduate",
-                "Cloud Enthusiast",
-                "DevOps Learner",
+            <TypeAnimation
+              sequence={[
+                "Aspiring Cloud Engineer",
+                2000,
+                "DevOps Enthusiast",
+                2000,
                 "Full Stack Developer",
+                2000,
+                "Lifelong Learner",
+                2000,
               ]}
-              loop={0}
-              cursor
-              cursorStyle="|"
-              typeSpeed={70}
-              deleteSpeed={50}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+              className="text-2xl font-semibold text-cyan-400"
             />
           </h2>
 
@@ -107,17 +111,18 @@ function Hero() {
           transition={{ duration: 0.8 }}
           className="flex justify-center"
         >
-          <div className="relative">
-            <div className="absolute inset-0 bg-blue-500 blur-3xl opacity-30 rounded-full"></div>
-
+          <div className="relative w-[420px] h-[420px] flex items-center justify-center mx-auto overflow-visible">
+            {" "}
+            <HeroOrbit />
             <img
               src={profile}
               alt="Milan Harsha"
-              className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-blue-500 shadow-2xl"
+              className="relative z-10 w-[380px] h-[380px] object-cover rounded-full border-4 border-blue-500 shadow-[0_0_40px_rgba(59,130,246,0.5)]"
             />
           </div>
         </motion.div>
       </div>
+      <ScrollIndicator />
     </section>
   );
 }
