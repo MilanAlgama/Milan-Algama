@@ -112,7 +112,8 @@ projects: [
     technologies: [
       "Java",
       "JavaFX",
-      "MySQL"
+      "MySQL",
+      "OOP"
     ],
 
     github:
@@ -134,13 +135,11 @@ projects: [
       "A Logistics Management System developed to manage deliveries, inventory and logistics operations efficiently using Java and MySQL.",
 
     technologies: [
-      "Java",
-      "MySQL",
-      "OOP"
+      "Java"
     ],
 
     github:
-      "https://github.com/MilanAlgama/Logistics-Management-System",
+      "https://github.com/MilanAlgama/LMS",
 
     image: `${import.meta.env.BASE_URL}Projects/LMS-ui.webp`,
 
