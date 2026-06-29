@@ -1,0 +1,33 @@
+import { motion } from "framer-motion";
+
+function FloatingBlobs() {
+  return (
+    <>
+      <motion.div
+        animate={{
+          y: [0, -30, 0],
+          x: [0, 20, 0],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+        }}
+        className="fixed top-20 left-20 w-64 h-64 rounded-full bg-blue-500/20 blur-[120px] -z-40"
+      />
+
+      <motion.div
+        animate={{
+          y: [0, 25, 0],
+          x: [0, -25, 0],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+        }}
+        className="fixed bottom-20 right-20 w-72 h-72 rounded-full bg-cyan-400/20 blur-[130px] -z-40"
+      />
+    </>
+  );
+}
+
+export default FloatingBlobs;
