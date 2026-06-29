@@ -118,7 +118,7 @@ projects: [
     github:
       "https://github.com/MilanAlgama/SalesManagementSystem",
 
-    image: "/projects/sales-placeholder.png",
+    image: `${import.meta.env.BASE_URL}Projects/POS-ui.webp`,
 
     featured: true,
   },
@@ -142,7 +142,7 @@ projects: [
     github:
       "https://github.com/MilanAlgama/Logistics-Management-System",
 
-    image: "/projects/logistics-placeholder.png",
+    image: `${import.meta.env.BASE_URL}Projects/LMS-ui.webp`,
 
     featured: true,
   },
@@ -155,7 +155,7 @@ certificates: [
     issuer: "SLIIT",
     year: "Completed",
     status: "Completed",
-    image: "/certificates/AIML-certificate.png",
+    image: `${import.meta.env.BASE_URL}certificates/AIML-certificate.webp`,
     credential: "#",
   },
   {

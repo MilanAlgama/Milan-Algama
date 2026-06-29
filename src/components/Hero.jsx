@@ -11,7 +11,7 @@ import {
   FaEnvelope,
   FaDownload,
 } from "react-icons/fa6";
-import profile from "../assets/portfolio-img.png";
+import profile from "../assets/portfolio-img.webp";
 
 function Hero() {
   return (
