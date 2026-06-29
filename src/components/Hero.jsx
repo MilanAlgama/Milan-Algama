@@ -15,8 +15,8 @@ import profile from "../assets/portfolio-img.webp";
 
 function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 pt-20">
-      <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-16 items-center">
+    <section className="relative min-h-screen flex items-center justify-center px-4 pt-24 pb-16 sm:px-6 lg:pt-20 lg:pb-0">
+      <div className="max-w-7xl w-full grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
         {/* Left */}
 
         <motion.div
@@ -24,16 +24,16 @@ function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-blue-400 uppercase tracking-[4px]">//Welcome</p>
+          <p className="text-sm text-blue-400 uppercase tracking-[4px] sm:text-base">//Welcome</p>
 
-          <h1 className="text-6xl lg:text-7xl font-bold mt-4">
+          <h1 className="text-4xl font-bold mt-4 leading-tight sm:text-5xl md:text-6xl lg:text-7xl">
             Hi,
             <br />
             I'm
             <span className="text-blue-500"> Milan Harsha</span>
           </h1>
 
-          <h2 className="mt-8 text-2xl text-slate-700 dark:text-gray-300">
+          <h2 className="mt-6 min-h-[2.25rem] text-xl text-slate-700 dark:text-gray-300 sm:mt-8 sm:min-h-[2.5rem] sm:text-2xl">
             <TypeAnimation
               sequence={[
                 "Aspiring Cloud Engineer",
@@ -48,17 +48,17 @@ function Hero() {
               wrapper="span"
               speed={50}
               repeat={Infinity}
-              className="text-2xl font-semibold text-cyan-400"
+              className="text-xl font-semibold text-cyan-400 sm:text-2xl"
             />
           </h2>
 
-          <p className="mt-8 leading-8 text-slate-600 dark:text-gray-400">
+          <p className="mt-6 max-w-2xl leading-8 text-slate-600 dark:text-gray-400 sm:mt-8">
             Passionate ICT undergraduate interested in Cloud Computing, DevOps,
             Full Stack Development, Docker, AWS and modern software engineering.
           </p>
 
-          <div className="flex flex-wrap gap-5 mt-10">
-            <div className="flex gap-5 mt-8">
+          <div className="flex flex-wrap items-center gap-4 mt-8 sm:gap-5 sm:mt-10">
+            <div className="flex flex-wrap gap-4 sm:gap-5 lg:mt-8">
               <a
                 href="https://github.com/MilanAlgama"
                 target="_blank"
@@ -94,13 +94,15 @@ function Hero() {
               href="/resume.pdf"
               className="
                         group
-                        flex
+                        inline-flex
                         items-center
+                        justify-center
                         gap-3
-                        px-7
-                        py-4
+                        px-5
+                        py-3.5
                         rounded-xl
                         font-semibold
+                        text-sm
                         bg-gradient-to-r
                         from-blue-600
                         to-cyan-500
@@ -110,6 +112,9 @@ function Hero() {
                         duration-500
                         shadow-[0_0_25px_rgba(59,130,246,0.4)]
                         hover:scale-105
+                        sm:px-7
+                        sm:py-4
+                        sm:text-base
                         "
             >
               <FaDownload />
@@ -119,8 +124,9 @@ function Hero() {
               href="#contact"
               className="
                         group
-                        px-7
-                        py-4
+                        justify-center
+                        px-5
+                        py-3.5
                         rounded-xl
                         border
                         border-cyan-500
@@ -134,6 +140,10 @@ function Hero() {
                         transition-all
                         duration-300
                         hover:scale-105
+                        text-sm
+                        sm:px-7
+                        sm:py-4
+                        sm:text-base
                       "
             >
               Contact Me
@@ -148,16 +158,16 @@ function Hero() {
           initial={{ opacity: 0, x: 80 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex justify-center"
+          className="flex justify-center lg:justify-end"
         >
-          <div className="relative w-[520px] h-[520px] flex items-center justify-center mx-auto overflow-visible">
+          <div className="relative mx-auto flex aspect-square w-[clamp(18rem,88vw,32.5rem)] items-center justify-center overflow-visible lg:mx-0">
             {" "}
             <HeroOrbit />
             <FloatingParticles />
             <>
-              <div className="absolute w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+              <div className="absolute h-60 w-60 rounded-full bg-blue-500/20 blur-3xl animate-pulse sm:h-80 sm:w-80 md:h-96 md:w-96"></div>
 
-              <div className="absolute w-80 h-80 bg-cyan-500/20 rounded-full blur-2xl animate-ping opacity-20"></div>
+              <div className="absolute h-52 w-52 rounded-full bg-cyan-500/20 blur-2xl animate-ping opacity-20 sm:h-72 sm:w-72 md:h-80 md:w-80"></div>
             </>
             <img
               src={profile}
@@ -165,10 +175,14 @@ function Hero() {
               className="
               relative
               z-10
-              w-80
-              h-80
-              md:w-96
-              md:h-96
+              w-52
+              h-52
+              sm:w-72
+              sm:h-72
+              md:w-80
+              md:h-80
+              lg:w-96
+              lg:h-96
               rounded-full
               object-cover
               border-4

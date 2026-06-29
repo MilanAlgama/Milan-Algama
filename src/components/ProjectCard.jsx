@@ -55,7 +55,7 @@ function ProjectCard({
     >
       {/* Image */}
 
-      <div className="relative overflow-hidden h-56">
+      <div className="relative h-48 overflow-hidden sm:h-56">
         <img
           src={image}
           alt={title}
@@ -69,8 +69,8 @@ function ProjectCard({
 
       {/* Content */}
 
-      <div className="p-7">
-        <h3 className="text-2xl font-bold">{title}</h3>
+      <div className="p-5 sm:p-7">
+        <h3 className="break-words text-xl font-bold sm:text-2xl">{title}</h3>
 
         <p className="text-blue-400 mt-2">{subtitle}</p>
 
@@ -100,7 +100,7 @@ function ProjectCard({
           href={github}
           target="_blank"
           rel="noreferrer"
-          className="mt-8 inline-flex items-center gap-3 rounded-xl bg-blue-600 px-6 py-3 text-white transition hover:bg-blue-700"
+          className="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-xl bg-blue-600 px-5 py-3 text-center text-white transition hover:bg-blue-700 sm:w-auto sm:px-6"
         >
           <FaGithub />
           View Source Code

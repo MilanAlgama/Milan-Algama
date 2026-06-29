@@ -5,13 +5,13 @@ function Footer() {
 
   return (
     <footer className="border-t border-slate-200 bg-white/80 backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-black/20">
-      <div className="max-w-7xl mx-auto px-6 py-10">
+      <div className="max-w-7xl mx-auto px-4 py-10 sm:px-6">
 
         {/* Top */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
 
           {/* Logo */}
-          <div className="text-center md:text-left">
+          <div className="text-center lg:text-left">
             <h2 className="text-3xl font-bold text-blue-500">
               Milan<span className="text-slate-950 dark:text-white">.</span>
             </h2>
@@ -22,7 +22,7 @@ function Footer() {
           </div>
 
           {/* Navigation */}
-          <div className="flex flex-wrap justify-center gap-6 text-slate-600 dark:text-gray-400">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-slate-600 dark:text-gray-400">
 
             <a href="#about" className="hover:text-blue-400 transition">
               About

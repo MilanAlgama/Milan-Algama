@@ -6,7 +6,7 @@ function Experience() {
   return (
     <section
       id="experience"
-      className="min-h-screen bg-slate-50 px-6 py-24 transition-colors duration-300 dark:bg-[#050816]"
+      className="min-h-screen bg-slate-50 px-4 py-20 transition-colors duration-300 dark:bg-[#050816] sm:px-6 sm:py-24"
     >
       <div className="max-w-6xl mx-auto">
 
@@ -17,16 +17,16 @@ function Experience() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="uppercase tracking-[6px] text-blue-400">
+          <p className="text-sm uppercase tracking-[4px] text-blue-400 sm:text-base sm:tracking-[6px]">
             Professional Journey
           </p>
 
-          <h2 className="text-5xl font-bold mt-3">
+          <h2 className="text-3xl font-bold mt-3 sm:text-4xl lg:text-5xl">
             Experience
           </h2>
         </motion.div>
 
-        <div className="mt-20">
+        <div className="mt-14 sm:mt-20">
 
           {portfolioData.experience.map((job, index) => (
 
@@ -45,7 +45,7 @@ function Experience() {
 
               viewport={{ once: true }}
 
-              className="rounded-3xl border border-slate-200 bg-white/80 p-8 shadow-lg shadow-slate-200/60 backdrop-blur-lg transition-all duration-300 hover:border-blue-500 hover:shadow-blue-200/70 dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:shadow-[0_0_40px_rgba(59,130,246,0.35)]"
+              className="rounded-3xl border border-slate-200 bg-white/80 p-5 shadow-lg shadow-slate-200/60 backdrop-blur-lg transition-all duration-300 hover:border-blue-500 hover:shadow-blue-200/70 dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:shadow-[0_0_40px_rgba(59,130,246,0.35)] sm:p-8"
 
             >
 
@@ -56,7 +56,7 @@ function Experience() {
                 </div>
 
                 <div>
-                  <h3 className="text-3xl font-bold">
+                  <h3 className="text-2xl font-bold sm:text-3xl">
                     {job.position}
                   </h3>
 

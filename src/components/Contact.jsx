@@ -49,7 +49,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen px-6 py-24 bg-transparent"
+      className="min-h-screen px-4 py-20 bg-transparent sm:px-6 sm:py-24"
     >
       <div className="max-w-7xl mx-auto">
 
@@ -60,11 +60,11 @@ function Contact() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="uppercase tracking-[6px] text-blue-400">
+          <p className="text-sm uppercase tracking-[4px] text-blue-400 sm:text-base sm:tracking-[6px]">
             Contact
           </p>
 
-          <h2 className="text-5xl font-bold mt-4">
+          <h2 className="text-3xl font-bold mt-4 sm:text-4xl lg:text-5xl">
             Let's Work Together
           </h2>
 
@@ -75,7 +75,7 @@ function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
 
           {/* Left */}
 
@@ -90,18 +90,18 @@ function Contact() {
                 whileHover={{
                   scale: 1.03,
                 }}
-                className="flex items-center gap-5 rounded-2xl border border-slate-200 bg-white/85 p-6 shadow-lg shadow-slate-200/60 backdrop-blur-xl transition hover:border-cyan-400 hover:shadow-cyan-200/70 dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:shadow-[0_0_25px_rgba(34,211,238,0.3)]"
+                className="flex min-w-0 items-center gap-4 rounded-2xl border border-slate-200 bg-white/85 p-5 shadow-lg shadow-slate-200/60 backdrop-blur-xl transition hover:border-cyan-400 hover:shadow-cyan-200/70 dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:shadow-[0_0_25px_rgba(34,211,238,0.3)] sm:gap-5 sm:p-6"
               >
                 <div className={`text-3xl ${item.color}`}>
                   {item.icon}
                 </div>
 
-                <div>
+                <div className="min-w-0">
                   <h3 className="font-semibold">
                     {item.title}
                   </h3>
 
-                  <p className="text-slate-600 dark:text-gray-400">
+                  <p className="break-words text-slate-600 dark:text-gray-400">
                     {item.value}
                   </p>
                 </div>
@@ -117,7 +117,7 @@ function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="space-y-6 rounded-3xl border border-slate-200 bg-white/85 p-8 shadow-lg shadow-slate-200/60 backdrop-blur-xl dark:border-white/10 dark:bg-white/5 dark:shadow-none"
+            className="space-y-6 rounded-3xl border border-slate-200 bg-white/85 p-5 shadow-lg shadow-slate-200/60 backdrop-blur-xl dark:border-white/10 dark:bg-white/5 dark:shadow-none sm:p-8"
           >
 
             <input

@@ -37,7 +37,7 @@ function About() {
   return (
     <section
       id="about"
-      className="min-h-screen bg-white px-6 py-20 transition-colors duration-300 dark:bg-[#0B1120] flex items-center"
+      className="min-h-screen bg-white px-4 py-20 transition-colors duration-300 dark:bg-[#0B1120] flex items-center sm:px-6"
     >
       <div className="max-w-7xl mx-auto">
 
@@ -48,15 +48,15 @@ function About() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="uppercase tracking-[6px] text-blue-400">
+          <p className="text-sm uppercase tracking-[4px] text-blue-400 sm:text-base sm:tracking-[6px]">
             Get To Know Me
           </p>
 
-          <h2 className="text-5xl font-bold mt-3">
+          <h2 className="text-3xl font-bold mt-3 sm:text-4xl lg:text-5xl">
             About Me
           </h2>
 
-          <p className="mt-8 text-slate-600 max-w-4xl mx-auto leading-8 text-lg dark:text-gray-400">
+          <p className="mt-6 text-slate-600 max-w-4xl mx-auto leading-8 text-base dark:text-gray-400 sm:mt-8 sm:text-lg">
             I'm Milan Harsha, an ICT undergraduate passionate about Cloud
             Computing, DevOps, Full Stack Development, and modern software
             engineering. I enjoy learning emerging technologies and building
@@ -65,7 +65,7 @@ function About() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 mt-16">
+        <div className="grid gap-6 mt-12 md:grid-cols-2 md:gap-8 md:mt-16">
 
           {cards.map((card, index) => (
 
@@ -75,14 +75,14 @@ function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="rounded-2xl border border-slate-200 bg-white/80 p-8 shadow-lg shadow-slate-200/60 backdrop-blur-md transition duration-300 hover:scale-105 hover:border-blue-500 dark:border-white/10 dark:bg-white/5 dark:shadow-none"
+              className="rounded-2xl border border-slate-200 bg-white/80 p-5 shadow-lg shadow-slate-200/60 backdrop-blur-md transition duration-300 hover:scale-105 hover:border-blue-500 dark:border-white/10 dark:bg-white/5 dark:shadow-none sm:p-8"
             >
 
               <div className="text-blue-400">
                 {card.icon}
               </div>
 
-              <h3 className="text-2xl font-semibold mt-5">
+              <h3 className="text-xl font-semibold mt-5 sm:text-2xl">
                 {card.title}
               </h3>
 

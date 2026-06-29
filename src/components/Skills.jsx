@@ -46,7 +46,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="min-h-screen bg-white px-6 py-24 transition-colors duration-300 dark:bg-[#0B1120]"
+      className="min-h-screen bg-white px-4 py-20 transition-colors duration-300 dark:bg-[#0B1120] sm:px-6 sm:py-24"
     >
       <div className="max-w-7xl mx-auto">
 
@@ -58,17 +58,17 @@ function Skills() {
           className="text-center"
         >
 
-          <p className="uppercase tracking-[6px] text-blue-400">
+          <p className="text-sm uppercase tracking-[4px] text-blue-400 sm:text-base sm:tracking-[6px]">
             What I Know
           </p>
 
-          <h2 className="text-5xl font-bold mt-3">
+          <h2 className="text-3xl font-bold mt-3 sm:text-4xl lg:text-5xl">
             Skills
           </h2>
 
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 mt-16">
+        <div className="grid gap-6 mt-12 lg:grid-cols-2 lg:gap-8 lg:mt-16">
 
           {portfolioData.skills.map((group,index)=>(
 
@@ -87,15 +87,15 @@ function Skills() {
 
               viewport={{once:true}}
 
-              className="rounded-2xl border border-slate-200 bg-white/80 p-8 shadow-lg shadow-slate-200/60 backdrop-blur-lg dark:border-white/10 dark:bg-white/5 dark:shadow-none"
+              className="rounded-2xl border border-slate-200 bg-white/80 p-5 shadow-lg shadow-slate-200/60 backdrop-blur-lg dark:border-white/10 dark:bg-white/5 dark:shadow-none sm:p-8"
 
             >
 
-              <h3 className="text-2xl font-semibold text-blue-400 mb-6">
+              <h3 className="text-xl font-semibold text-blue-400 mb-6 sm:text-2xl">
                 {group.category}
               </h3>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid gap-4 sm:grid-cols-2">
 
                 {group.technologies.map((tech)=>(
 
@@ -103,7 +103,7 @@ function Skills() {
 
                     key={tech}
 
-                    className="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4 transition duration-300 hover:bg-blue-600 hover:text-white dark:border-transparent dark:bg-[#111827]"
+                    className="flex min-w-0 items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4 transition duration-300 hover:bg-blue-600 hover:text-white dark:border-transparent dark:bg-[#111827]"
 
                   >
 
@@ -111,7 +111,7 @@ function Skills() {
                       {icons[tech]}
                     </span>
 
-                    <span>{tech}</span>
+                    <span className="min-w-0 break-words">{tech}</span>
 
                   </div>
 

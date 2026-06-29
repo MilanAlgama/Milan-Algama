@@ -34,20 +34,20 @@ function Navbar({ darkMode, setDarkMode }) {
 "
     >
       {" "}
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
         {/* Logo */}
         <div className="flex flex-col">
           <h1 className="text-2xl font-bold text-blue-500">
             Milan<span className="text-slate-950 dark:text-white">.</span>
           </h1>
-          <span className="text-xs text-slate-500 dark:text-gray-400">
+          <span className="max-w-[180px] text-xs text-slate-500 dark:text-gray-400 sm:max-w-none">
             Cloud • DevOps • Full Stack
           </span>
         </div>
 
         {/* Desktop Menu + Theme Toggle */}
-        <div className="hidden md:flex items-center gap-8">
-          <ul className="flex gap-8">
+        <div className="hidden lg:flex items-center gap-8">
+          <ul className="flex gap-7 xl:gap-8">
             {navLinks.map((item) => (
               <li
                 key={item.id}
@@ -72,7 +72,7 @@ duration-300
 
         {/* Mobile Button */}
         {/* Mobile Controls */}
-        <div className="md:hidden flex items-center gap-3">
+        <div className="lg:hidden flex items-center gap-3">
           <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
 
           <button
@@ -87,7 +87,7 @@ duration-300
       </div>
       {/* Mobile Menu */}
       {toggle && (
-        <div className="border-t border-slate-200 bg-white/95 md:hidden dark:border-white/10 dark:bg-[#111827]">
+        <div className="border-t border-slate-200 bg-white/95 lg:hidden dark:border-white/10 dark:bg-[#111827]">
           <ul className="flex flex-col items-center py-6 gap-6">
             {navLinks.map((item) => (
               <li key={item.id}>

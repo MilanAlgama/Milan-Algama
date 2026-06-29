@@ -86,8 +86,9 @@ function HeroOrbit() {
           >
             <div
               className={`
-                flex items-center gap-3
-                px-4 py-2
+                flex items-center gap-2
+                scale-75
+                px-3 py-2
                 rounded-full
                 border border-slate-200
                 backdrop-blur-xl
@@ -101,11 +102,15 @@ function HeroOrbit() {
                 transition-all
                 duration-300
                 cursor-default
+                sm:scale-90
+                sm:gap-3
+                sm:px-4
+                md:scale-100
               `}
             >
-              <Icon className={`text-2xl ${tech.color}`} />
+              <Icon className={`text-xl sm:text-2xl ${tech.color}`} />
 
-              <span className="whitespace-nowrap text-sm font-medium text-slate-900 dark:text-white">
+              <span className="whitespace-nowrap text-xs font-medium text-slate-900 dark:text-white sm:text-sm">
                 {tech.name}
               </span>
             </div>

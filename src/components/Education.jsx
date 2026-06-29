@@ -6,7 +6,7 @@ function Education() {
   return (
     <section
       id="education"
-      className="min-h-screen bg-slate-50 px-6 py-24 transition-colors duration-300 dark:bg-[#050816]"
+      className="min-h-screen bg-slate-50 px-4 py-20 transition-colors duration-300 dark:bg-[#050816] sm:px-6 sm:py-24"
     >
       <div className="max-w-5xl mx-auto">
 
@@ -17,16 +17,16 @@ function Education() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="uppercase tracking-[6px] text-blue-400">
+          <p className="text-sm uppercase tracking-[4px] text-blue-400 sm:text-base sm:tracking-[6px]">
             My Journey
           </p>
 
-          <h2 className="text-5xl font-bold mt-3">
+          <h2 className="text-3xl font-bold mt-3 sm:text-4xl lg:text-5xl">
             Education
           </h2>
         </motion.div>
 
-        <div className="relative mt-20">
+        <div className="relative mt-14 sm:mt-20">
 
           {/* Timeline Line */}
 
@@ -40,7 +40,7 @@ function Education() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="relative pl-16 mb-14"
+              className="relative pl-12 mb-10 sm:pl-16 sm:mb-14"
             >
 
               <div className="absolute left-0 top-2 w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center">
@@ -49,9 +49,9 @@ function Education() {
 
               </div>
 
-              <div className="rounded-xl border border-slate-200 bg-white/80 p-6 shadow-lg shadow-slate-200/60 backdrop-blur-md transition hover:border-blue-500 dark:border-white/10 dark:bg-white/5 dark:shadow-none">
+              <div className="rounded-xl border border-slate-200 bg-white/80 p-5 shadow-lg shadow-slate-200/60 backdrop-blur-md transition hover:border-blue-500 dark:border-white/10 dark:bg-white/5 dark:shadow-none sm:p-6">
 
-                <h3 className="text-2xl font-semibold">
+                <h3 className="break-words text-xl font-semibold sm:text-2xl">
                   {item.title}
                 </h3>
 
