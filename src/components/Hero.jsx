@@ -57,8 +57,8 @@ function Hero() {
             Full Stack Development, Docker, AWS and modern software engineering.
           </p>
 
-          <div className="flex flex-wrap items-center gap-4 mt-8 sm:gap-5 sm:mt-10">
-            <div className="flex flex-wrap gap-4 sm:gap-5 lg:mt-8">
+          <div className="mt-8 space-y-6 sm:mt-10">
+            <div className="flex flex-wrap gap-4 sm:gap-5">
               <a
                 href="https://github.com/MilanAlgama"
                 target="_blank"
@@ -94,65 +94,24 @@ function Hero() {
               </a>
             </div>
 
-            <a
-              href="/resume.pdf"
-              className="
-                        group
-                        inline-flex
-                        items-center
-                        justify-center
-                        gap-3
-                        px-5
-                        py-3.5
-                        rounded-xl
-                        font-semibold
-                        text-sm
-                        bg-gradient-to-r
-                        from-blue-600
-                        to-cyan-500
-                        hover:from-cyan-500
-                        hover:to-blue-600
-                        transition-all
-                        duration-500
-                        shadow-[0_0_25px_rgba(59,130,246,0.4)]
-                        hover:scale-105
-                        sm:px-7
-                        sm:py-4
-                        sm:text-base
-                        "
-            >
-              <FaDownload />
-              Download Resume
-            </a>
-            <a
-              href="#contact"
-              className="
-                        group
-                        justify-center
-                        px-5
-                        py-3.5
-                        rounded-xl
-                        border
-                        border-cyan-500
-                        text-blue-700
-                        dark:text-white
-                        flex
-                        items-center
-                        gap-3
-                        hover:bg-cyan-500
-                        hover:text-black
-                        transition-all
-                        duration-300
-                        hover:scale-105
-                        text-sm
-                        sm:px-7
-                        sm:py-4
-                        sm:text-base
-                      "
-            >
-              Contact Me
-              <span className="group-hover:translate-x-1 transition">→</span>
-            </a>
+            <div className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row sm:items-center sm:gap-5">
+              <a
+                href="/resume.pdf"
+                download
+                className="group flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 px-5 py-3.5 text-sm font-semibold shadow-[0_0_25px_rgba(59,130,246,0.4)] transition-all duration-500 hover:scale-105 hover:from-cyan-500 hover:to-blue-600 sm:px-7 sm:py-4 sm:text-base"
+              >
+                <FaDownload />
+                Download Resume
+              </a>
+
+              <a
+                href="mailto:milanharsha28@gmail.com?subject=Portfolio%20Contact&body=Hi%20Milan%2C%0D%0A%0D%0A"
+                className="group flex items-center justify-center gap-3 rounded-xl border border-cyan-500 px-5 py-3.5 text-sm text-blue-700 transition-all duration-300 hover:scale-105 hover:bg-cyan-500 hover:text-black dark:text-white sm:px-7 sm:py-4 sm:text-base"
+              >
+                <FaEnvelope />
+                Contact Me
+              </a>
+            </div>
           </div>
         </motion.div>
 

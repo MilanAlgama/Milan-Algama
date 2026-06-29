@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { AnimatePresence } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -12,8 +13,10 @@ import FloatingBlobs from "./components/background/FloatingBlobs";
 /*import ParticlesBackground from "./components/background/ParticlesBackground";*/
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Preloader from "./components/Preloader";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem("theme") !== "light";
   });
@@ -28,8 +31,28 @@ function App() {
     }
   }, [darkMode]);
 
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setIsLoading(false);
+    }, 2100);
+
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = isLoading ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isLoading]);
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-950 transition-colors duration-300 dark:bg-[#050816] dark:text-white">
+      <AnimatePresence mode="wait">
+        {isLoading && <Preloader />}
+      </AnimatePresence>
+
       <GradientBackground />
       <FloatingBlobs />
       {/*<ParticlesBackground />*/}

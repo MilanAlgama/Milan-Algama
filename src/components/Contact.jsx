@@ -113,6 +113,9 @@ function Contact() {
           {/* Right */}
 
           <motion.form
+            action="mailto:milanharsha28@gmail.com"
+            method="post"
+            encType="text/plain"
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
@@ -122,19 +125,25 @@ function Contact() {
 
             <input
               type="text"
+              name="name"
               placeholder="Your Name"
+              required
               className="w-full rounded-xl border border-slate-200 bg-white/80 p-4 text-slate-950 outline-none transition focus:border-cyan-400 dark:border-white/10 dark:bg-black/30 dark:text-white"
             />
 
             <input
               type="email"
+              name="email"
               placeholder="Your Email"
+              required
               className="w-full rounded-xl border border-slate-200 bg-white/80 p-4 text-slate-950 outline-none transition focus:border-cyan-400 dark:border-white/10 dark:bg-black/30 dark:text-white"
             />
 
             <textarea
+              name="message"
               rows="6"
               placeholder="Your Message"
+              required
               className="w-full resize-none rounded-xl border border-slate-200 bg-white/80 p-4 text-slate-950 outline-none transition focus:border-cyan-400 dark:border-white/10 dark:bg-black/30 dark:text-white"
             ></textarea>
 
