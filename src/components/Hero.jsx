@@ -69,14 +69,18 @@ function Hero() {
               </a>
 
               <a
-                href="#"
+                href="https://www.linkedin.com/in/milan-harsha-748ab6278/"
+                target="_blank"
+                rel="noreferrer"
                 className="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white/80 shadow-md shadow-slate-200/60 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-blue-200/80 dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]"
               >
                 <FaLinkedin className="text-2xl text-[#0A66C2]" />
               </a>
 
               <a
-                href="#"
+                href="https://x.com/Milan_HarshaX"
+                target="_blank"
+                rel="noreferrer"
                 className="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white/80 shadow-md shadow-slate-200/60 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-slate-900 hover:shadow-slate-300/80 dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:border-white dark:hover:shadow-[0_0_20px_rgba(255,255,255,0.4)]"
               >
                 <FaXTwitter className="text-2xl text-slate-900 dark:text-white" />

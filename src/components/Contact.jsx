@@ -40,8 +40,8 @@ function Contact() {
     {
       icon: <FaLinkedin />,
       title: "LinkedIn",
-      value: "Coming Soon",
-      link: "#",
+      value: "Milan Harsha",
+      link: "https://www.linkedin.com/in/milan-harsha-748ab6278/",
       color: "text-[#0A66C2]",
     },
   ];

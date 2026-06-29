@@ -63,14 +63,18 @@ function Footer() {
             </a>
 
             <a
-              href="#"
+              href="https://www.linkedin.com/in/milan-harsha-748ab6278/"
+              target="_blank"
+              rel="noreferrer"
               className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white/80 shadow-sm shadow-slate-200/70 transition-all hover:scale-110 hover:border-blue-500 hover:shadow-blue-200/80 dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]"
             >
               <FaLinkedin className="text-xl text-[#0A66C2]" />
             </a>
 
             <a
-              href="#"
+              href="https://x.com/Milan_HarshaX"
+              target="_blank"
+              rel="noreferrer"
               className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white/80 shadow-sm shadow-slate-200/70 transition-all hover:scale-110 hover:border-slate-900 hover:shadow-slate-300/80 dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:border-white dark:hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
             >
               <FaXTwitter className="text-xl" />

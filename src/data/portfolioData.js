@@ -4,7 +4,7 @@ const portfolioData = {
     role: "ICT Undergraduate | Cloud & DevOps Enthusiast",
     email: "milanharsha28@gmail.com",
     github: "https://github.com/MilanAlgama",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/milan-harsha-748ab6278/",
     resume: "/resume.pdf",
   },
 
