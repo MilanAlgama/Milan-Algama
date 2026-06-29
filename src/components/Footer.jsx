@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin, FaXTwitter, FaEnvelope } from "react-icons/fa6";
+import { Link } from "react-scroll";
 
 function Footer() {
   const year = new Date().getFullYear();
@@ -12,9 +13,11 @@ function Footer() {
 
           {/* Logo */}
           <div className="text-center lg:text-left">
-            <h2 className="text-3xl font-bold text-blue-500">
-              Milan<span className="text-slate-950 dark:text-white">.</span>
-            </h2>
+            <Link to="hero" smooth={true} duration={500} className="cursor-pointer">
+              <h2 className="text-3xl font-bold text-blue-500">
+                Milan Harsha<span className="text-slate-950 dark:text-white">.</span>
+              </h2>
+            </Link>
 
             <p className="mt-2 text-slate-600 dark:text-gray-400">
               Cloud • DevOps • Full Stack

@@ -15,7 +15,10 @@ import profile from "../assets/portfolio-img.webp";
 
 function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 pt-24 pb-16 sm:px-6 lg:pt-20 lg:pb-0">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center justify-center px-4 pt-24 pb-16 sm:px-6 lg:pt-20 lg:pb-0"
+    >
       <div className="max-w-7xl w-full grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
         {/* Left */}
 

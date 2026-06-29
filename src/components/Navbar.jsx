@@ -37,9 +37,17 @@ function Navbar({ darkMode, setDarkMode }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
         {/* Logo */}
         <div className="flex flex-col">
-          <h1 className="text-2xl font-bold text-blue-500">
-            Milan<span className="text-slate-950 dark:text-white">.</span>
-          </h1>
+          <Link
+            to="hero"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer"
+            onClick={() => setToggle(false)}
+          >
+            <h1 className="text-2xl font-bold text-blue-500">
+              Milan Harsha<span className="text-slate-950 dark:text-white">.</span>
+            </h1>
+          </Link>
           <span className="max-w-[180px] text-xs text-slate-500 dark:text-gray-400 sm:max-w-none">
             Cloud • DevOps • Full Stack
           </span>
@@ -60,7 +68,13 @@ transition
 duration-300
 "
               >
-                <Link to={item.id} smooth={true} duration={500} offset={-80}>
+                <Link
+                  to={item.id}
+                  smooth={true}
+                  duration={500}
+                  offset={-80}
+                  className="cursor-pointer"
+                >
                   {item.title}
                 </Link>
               </li>
