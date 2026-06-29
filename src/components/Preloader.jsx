@@ -111,7 +111,7 @@ function Preloader() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.25, duration: 0.55 }}
         >
-          Milan Portfolio
+          Loading....
         </motion.p>
 
         <motion.div
