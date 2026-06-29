@@ -2,7 +2,7 @@ import HeroOrbit from "./HeroOrbit";
 import FloatingParticles from "./FloatingParticles";
 import ScrollIndicator from "./ScrollIndicator";
 import { TypeAnimation } from "react-type-animation";
-import { Typewriter } from "react-simple-typewriter";
+/*import { Typewriter } from "react-simple-typewriter";*/
 import { motion } from "framer-motion";
 import {
   FaGithub,
@@ -152,6 +152,7 @@ function Hero() {
           <div className="relative w-[520px] h-[520px] flex items-center justify-center mx-auto overflow-visible">
             {" "}
             <HeroOrbit />
+            <FloatingParticles />
             <>
               <div className="absolute w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
 

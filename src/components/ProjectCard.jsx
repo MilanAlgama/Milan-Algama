@@ -15,7 +15,7 @@ import {
   SiGooglecloud,
 } from "react-icons/si";
 
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+/*import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";*/
 
 const techIcons = {
   Java: <FaJava className="text-orange-500 text-lg" />,
@@ -46,7 +46,6 @@ function ProjectCard({
   technologies,
   github,
   image,
-  featured,
 }) {
   return (
     <motion.div
