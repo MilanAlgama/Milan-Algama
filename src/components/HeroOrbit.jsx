@@ -79,7 +79,7 @@ function HeroOrbit() {
               x: [0, 6, 0],
             }}
             transition={{
-              duration: 3 + index * 0.4,
+              duration: 5 + index,
               repeat: Infinity,
               ease: "easeInOut",
             }}

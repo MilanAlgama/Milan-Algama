@@ -58,71 +58,35 @@ function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-5 mt-10">
-            <div className="flex items-center gap-5 mt-8">
+            <div className="flex gap-5 mt-8">
               <a
                 href="https://github.com/MilanAlgama"
                 target="_blank"
                 rel="noreferrer"
-                className="
-                      text-3xl
-                      text-gray-400
-                      hover:text-white
-                      hover:-translate-y-1
-                      hover:scale-125
-                      transition-all
-                      duration-300
-                      "
-                                    >
-                <FaGithub />
+                className="w-12 h-12 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] hover:-translate-y-1 transition-all duration-300"
+              >
+                <FaGithub className="text-2xl text-white" />
               </a>
 
               <a
                 href="#"
-                target="_blank"
-                rel="noreferrer"
-                className="
-                          text-3xl
-                          text-gray-400
-                          hover:text-white
-                          hover:-translate-y-1
-                          hover:scale-125
-                          transition-all
-                          duration-300
-                          "
-                                        >
-                <FaLinkedin />
+                className="w-12 h-12 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center hover:border-blue-500 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:-translate-y-1 transition-all duration-300"
+              >
+                <FaLinkedin className="text-2xl text-[#0A66C2]" />
               </a>
 
               <a
                 href="#"
-                target="_blank"
-                rel="noreferrer"
-                className="
-                      text-3xl
-                      text-gray-400
-                      hover:text-white
-                      hover:-translate-y-1
-                      hover:scale-125
-                      transition-all
-                      duration-300
-                      "
-                                    >
-                <FaXTwitter />
+                className="w-12 h-12 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center hover:border-white hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] hover:-translate-y-1 transition-all duration-300"
+              >
+                <FaXTwitter className="text-2xl text-white" />
               </a>
 
               <a
                 href="mailto:milanharsha28@gmail.com"
-                className="
-                        text-3xl
-                        text-gray-400
-                        hover:text-white
-                        hover:-translate-y-1
-                        hover:scale-125
-                        transition-all
-                        duration-300
-                        "
-                                      > 
-                <FaEnvelope />
+                className="w-12 h-12 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center hover:border-red-500 hover:shadow-[0_0_20px_rgba(239,68,68,0.5)] hover:-translate-y-1 transition-all duration-300"
+              >
+                <FaEnvelope className="text-2xl text-red-400" />
               </a>
             </div>
 
@@ -151,6 +115,29 @@ function Hero() {
               <FaDownload />
               Download Resume
             </a>
+            <a
+              href="#contact"
+              className="
+                        group
+                        px-7
+                        py-4
+                        rounded-xl
+                        border
+                        border-cyan-500
+                        text-white
+                        flex
+                        items-center
+                        gap-3
+                        hover:bg-cyan-500
+                        hover:text-black
+                        transition-all
+                        duration-300
+                        hover:scale-105
+                      "
+            >
+              Contact Me
+              <span className="group-hover:translate-x-1 transition">→</span>
+            </a>
           </div>
         </motion.div>
 
@@ -165,17 +152,11 @@ function Hero() {
           <div className="relative w-[520px] h-[520px] flex items-center justify-center mx-auto overflow-visible">
             {" "}
             <HeroOrbit />
-            <div
-                className="
-                absolute
-                w-96
-                h-96
-                rounded-full
-                bg-blue-500/20
-                blur-3xl
-                animate-pulse
-                "
-              ></div>
+            <>
+              <div className="absolute w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+
+              <div className="absolute w-80 h-80 bg-cyan-500/20 rounded-full blur-2xl animate-ping opacity-20"></div>
+            </>
             <img
               src={profile}
               alt="Milan Harsha"

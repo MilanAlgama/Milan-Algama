@@ -1,12 +1,16 @@
 import { motion } from "framer-motion";
 
 const particles = [
-  { top: "10%", left: "15%" },
-  { top: "20%", left: "85%" },
-  { top: "70%", left: "12%" },
-  { top: "80%", left: "88%" },
-  { top: "40%", left: "5%" },
-  { top: "50%", left: "95%" },
+  { top: "8%", left: "20%" },
+  { top: "18%", left: "75%" },
+  { top: "25%", left: "50%" },
+  { top: "35%", left: "10%" },
+  { top: "42%", left: "90%" },
+  { top: "55%", left: "15%" },
+  { top: "65%", left: "80%" },
+  { top: "72%", left: "45%" },
+  { top: "85%", left: "30%" },
+  { top: "90%", left: "70%" },
 ];
 
 function FloatingParticles() {
