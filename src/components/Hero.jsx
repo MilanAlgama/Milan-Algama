@@ -111,14 +111,25 @@ function Hero() {
           transition={{ duration: 0.8 }}
           className="flex justify-center"
         >
-          <div className="relative w-[420px] h-[420px] flex items-center justify-center mx-auto overflow-visible">
+          <div className="relative w-[520px] h-[520px] flex items-center justify-center mx-auto overflow-visible">
             {" "}
             <HeroOrbit />
             <img
               src={profile}
               alt="Milan Harsha"
-              className="relative z-10 w-[380px] h-[380px] object-cover rounded-full border-4 border-blue-500 shadow-[0_0_40px_rgba(59,130,246,0.5)]"
-            />
+              className="
+              relative
+              z-10
+              w-80
+              h-80
+              md:w-96
+              md:h-96
+              rounded-full
+              object-cover
+              border-4
+              border-blue-500
+              shadow-[0_0_60px_rgba(59,130,246,0.7)]
+              "            />
           </div>
         </motion.div>
       </div>
