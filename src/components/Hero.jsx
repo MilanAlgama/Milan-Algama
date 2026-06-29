@@ -1,4 +1,5 @@
 import HeroOrbit from "./HeroOrbit";
+import FloatingParticles from "./FloatingParticles";
 import ScrollIndicator from "./ScrollIndicator";
 import { TypeAnimation } from "react-type-animation";
 import { Typewriter } from "react-simple-typewriter";
@@ -62,8 +63,16 @@ function Hero() {
                 href="https://github.com/MilanAlgama"
                 target="_blank"
                 rel="noreferrer"
-                className="text-3xl text-gray-400 hover:text-white transition duration-300"
-              >
+                className="
+                      text-3xl
+                      text-gray-400
+                      hover:text-white
+                      hover:-translate-y-1
+                      hover:scale-125
+                      transition-all
+                      duration-300
+                      "
+                                    >
                 <FaGithub />
               </a>
 
@@ -71,8 +80,16 @@ function Hero() {
                 href="#"
                 target="_blank"
                 rel="noreferrer"
-                className="text-3xl text-gray-400 hover:text-[#0A66C2] transition duration-300"
-              >
+                className="
+                          text-3xl
+                          text-gray-400
+                          hover:text-white
+                          hover:-translate-y-1
+                          hover:scale-125
+                          transition-all
+                          duration-300
+                          "
+                                        >
                 <FaLinkedin />
               </a>
 
@@ -80,22 +97,56 @@ function Hero() {
                 href="#"
                 target="_blank"
                 rel="noreferrer"
-                className="text-3xl text-gray-400 hover:text-white transition duration-300"
-              >
+                className="
+                      text-3xl
+                      text-gray-400
+                      hover:text-white
+                      hover:-translate-y-1
+                      hover:scale-125
+                      transition-all
+                      duration-300
+                      "
+                                    >
                 <FaXTwitter />
               </a>
 
               <a
                 href="mailto:milanharsha28@gmail.com"
-                className="text-3xl text-gray-400 hover:text-red-400 transition duration-300"
-              >
+                className="
+                        text-3xl
+                        text-gray-400
+                        hover:text-white
+                        hover:-translate-y-1
+                        hover:scale-125
+                        transition-all
+                        duration-300
+                        "
+                                      > 
                 <FaEnvelope />
               </a>
             </div>
 
             <a
               href="/resume.pdf"
-              className="border border-blue-500 px-7 py-4 rounded-xl flex items-center gap-3 hover:bg-blue-600 transition"
+              className="
+                        group
+                        flex
+                        items-center
+                        gap-3
+                        px-7
+                        py-4
+                        rounded-xl
+                        font-semibold
+                        bg-gradient-to-r
+                        from-blue-600
+                        to-cyan-500
+                        hover:from-cyan-500
+                        hover:to-blue-600
+                        transition-all
+                        duration-500
+                        shadow-[0_0_25px_rgba(59,130,246,0.4)]
+                        hover:scale-105
+                        "
             >
               <FaDownload />
               Download Resume
@@ -114,6 +165,17 @@ function Hero() {
           <div className="relative w-[520px] h-[520px] flex items-center justify-center mx-auto overflow-visible">
             {" "}
             <HeroOrbit />
+            <div
+                className="
+                absolute
+                w-96
+                h-96
+                rounded-full
+                bg-blue-500/20
+                blur-3xl
+                animate-pulse
+                "
+              ></div>
             <img
               src={profile}
               alt="Milan Harsha"
@@ -129,7 +191,8 @@ function Hero() {
               border-4
               border-blue-500
               shadow-[0_0_60px_rgba(59,130,246,0.7)]
-              "            />
+              "
+            />
           </div>
         </motion.div>
       </div>
