@@ -10,8 +10,8 @@ function ScrollIndicator() {
       }}
       className="flex justify-center mt-16"
     >
-      <div className="w-7 h-12 border-2 border-blue-400 rounded-full flex justify-center">
-        <div className="w-1 h-3 bg-blue-400 rounded-full mt-2"></div>
+      <div className="flex h-12 w-7 justify-center rounded-full border-2 border-blue-500 dark:border-blue-400">
+        <div className="mt-2 h-3 w-1 rounded-full bg-blue-500 dark:bg-blue-400"></div>
       </div>
     </motion.div>
   );

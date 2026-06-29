@@ -51,7 +51,7 @@ function ProjectCard({
     <motion.div
       whileHover={{ y: -8, scale: 1.02 }}
       transition={{ duration: 0.3 }}
-      className="overflow-hidden rounded-3xl bg-white/5 backdrop-blur-lg border border-white/10 hover:border-blue-500 hover:shadow-[0_0_35px_rgba(59,130,246,0.35)] transition-all"
+      className="overflow-hidden rounded-3xl border border-slate-200 bg-white/85 shadow-lg shadow-slate-200/60 backdrop-blur-lg transition-all hover:border-blue-500 hover:shadow-blue-200/70 dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:shadow-[0_0_35px_rgba(59,130,246,0.35)]"
     >
       {/* Image */}
 
@@ -62,7 +62,7 @@ function ProjectCard({
           className="w-full h-full object-cover transition duration-500 hover:scale-110"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent dark:from-[#050816] dark:via-transparent"></div>
 
 
       </div>
@@ -74,7 +74,7 @@ function ProjectCard({
 
         <p className="text-blue-400 mt-2">{subtitle}</p>
 
-        <p className="text-gray-400 mt-5 leading-7">{description}</p>
+        <p className="mt-5 leading-7 text-slate-600 dark:text-gray-400">{description}</p>
 
         {/* Technologies */}
 
@@ -82,7 +82,7 @@ function ProjectCard({
           {technologies.map((tech) => (
             <span
               key={tech}
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/10 hover:border-blue-500 hover:bg-blue-500/20 transition-all duration-300"
+              className="flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 transition-all duration-300 hover:border-blue-500 hover:bg-blue-50 dark:border-white/10 dark:bg-white/10 dark:hover:bg-blue-500/20"
             >
               {techIcons[tech] || (
                 <span className="text-blue-400 font-bold">
@@ -100,7 +100,7 @@ function ProjectCard({
           href={github}
           target="_blank"
           rel="noreferrer"
-          className="mt-8 inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl transition"
+          className="mt-8 inline-flex items-center gap-3 rounded-xl bg-blue-600 px-6 py-3 text-white transition hover:bg-blue-700"
         >
           <FaGithub />
           View Source Code

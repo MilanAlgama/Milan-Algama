@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { title: "About", id: "about" },
@@ -11,54 +12,82 @@ const navLinks = [
   { title: "Contact", id: "contact" },
 ];
 
-function Navbar() {
+function Navbar({ darkMode, setDarkMode }) {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-black/30 border-b border-white/10">
+    <nav
+      className="
+  fixed
+  top-0
+  left-0
+  w-full
+  z-50
+  backdrop-blur-lg
+  bg-white/80
+  dark:bg-black/30
+  border-b
+  border-gray-300
+  dark:border-white/10
+  transition-colors
+  duration-300
+"
+    >
+      {" "}
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-
         {/* Logo */}
         <div className="flex flex-col">
           <h1 className="text-2xl font-bold text-blue-500">
-            Milan<span className="text-white">.</span>
+            Milan<span className="text-slate-950 dark:text-white">.</span>
           </h1>
-          <span className="text-xs text-gray-400">
+          <span className="text-xs text-slate-500 dark:text-gray-400">
             Cloud • DevOps • Full Stack
           </span>
         </div>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-8">
-          {navLinks.map((item) => (
-            <li
-              key={item.id}
-              className="text-gray-300 hover:text-blue-400 transition duration-300 cursor-pointer"
-            >
-              <Link
-                to={item.id}
-                smooth={true}
-                duration={500}
-                offset={-80}
+        {/* Desktop Menu + Theme Toggle */}
+        <div className="hidden md:flex items-center gap-8">
+          <ul className="flex gap-8">
+            {navLinks.map((item) => (
+              <li
+                key={item.id}
+                className="
+text-gray-700
+dark:text-gray-300
+hover:text-blue-500
+dark:hover:text-blue-400
+transition
+duration-300
+"
               >
-                {item.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
+                <Link to={item.id} smooth={true} duration={500} offset={-80}>
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
+        </div>
 
         {/* Mobile Button */}
-        <button
-          onClick={() => setToggle(!toggle)}
-          className="md:hidden text-2xl text-white"
-        >
-          {toggle ? <FaTimes /> : <FaBars />}
-        </button>
-      </div>
+        {/* Mobile Controls */}
+        <div className="md:hidden flex items-center gap-3">
+          <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
 
+          <button
+            onClick={() => setToggle(!toggle)}
+            className="text-2xl text-black dark:text-white"
+          >
+            {toggle ? <FaTimes /> : <FaBars />}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+      </div>
       {/* Mobile Menu */}
       {toggle && (
-        <div className="md:hidden bg-[#111827]">
+        <div className="border-t border-slate-200 bg-white/95 md:hidden dark:border-white/10 dark:bg-[#111827]">
           <ul className="flex flex-col items-center py-6 gap-6">
             {navLinks.map((item) => (
               <li key={item.id}>
@@ -68,7 +97,7 @@ function Navbar() {
                   duration={500}
                   offset={-80}
                   onClick={() => setToggle(false)}
-                  className="text-gray-300 hover:text-blue-400 cursor-pointer"
+                  className="cursor-pointer text-slate-700 transition hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
                 >
                   {item.title}
                 </Link>

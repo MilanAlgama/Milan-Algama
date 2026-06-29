@@ -37,7 +37,7 @@ function About() {
   return (
     <section
       id="about"
-      className="min-h-screen bg-[#0B1120] flex items-center py-20 px-6"
+      className="min-h-screen bg-white px-6 py-20 transition-colors duration-300 dark:bg-[#0B1120] flex items-center"
     >
       <div className="max-w-7xl mx-auto">
 
@@ -56,7 +56,7 @@ function About() {
             About Me
           </h2>
 
-          <p className="mt-8 text-gray-400 max-w-4xl mx-auto leading-8 text-lg">
+          <p className="mt-8 text-slate-600 max-w-4xl mx-auto leading-8 text-lg dark:text-gray-400">
             I'm Milan Harsha, an ICT undergraduate passionate about Cloud
             Computing, DevOps, Full Stack Development, and modern software
             engineering. I enjoy learning emerging technologies and building
@@ -75,7 +75,7 @@ function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 hover:border-blue-500 hover:scale-105 transition duration-300"
+              className="rounded-2xl border border-slate-200 bg-white/80 p-8 shadow-lg shadow-slate-200/60 backdrop-blur-md transition duration-300 hover:scale-105 hover:border-blue-500 dark:border-white/10 dark:bg-white/5 dark:shadow-none"
             >
 
               <div className="text-blue-400">
@@ -86,7 +86,7 @@ function About() {
                 {card.title}
               </h3>
 
-              <p className="text-gray-400 mt-4 leading-7">
+              <p className="mt-4 leading-7 text-slate-600 dark:text-gray-400">
                 {card.description}
               </p>
 

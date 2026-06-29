@@ -6,7 +6,7 @@ function Certificates() {
   return (
     <section
       id="certificates"
-      className="min-h-screen bg-[#050816] py-24 px-6"
+      className="min-h-screen bg-slate-50 px-6 py-24 transition-colors duration-300 dark:bg-[#050816]"
     >
       <div className="max-w-7xl mx-auto">
 
@@ -25,7 +25,7 @@ function Certificates() {
             Certificates
           </h2>
 
-          <p className="mt-6 text-gray-400 max-w-3xl mx-auto">
+          <p className="mx-auto mt-6 max-w-3xl text-slate-600 dark:text-gray-400">
             Certifications and courses that support my journey toward becoming a Cloud & DevOps Engineer.
           </p>
 

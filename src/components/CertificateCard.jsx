@@ -8,8 +8,7 @@ function CertificateCard({ title, issuer, year, status, image, credential }) {
         y: -10,
         scale: 1.03,
       }}
-      className="overflow-hidden rounded-3xl bg-white/5 backdrop-blur-lg border border-white/10 hover:border-cyan-400 hover:shadow-[0_0_35px_rgba(34,211,238,0.35)] transition-all duration-300"
-      className="overflow-hidden rounded-3xl bg-white/5 backdrop-blur-lg border border-white/10 hover:border-cyan-400 hover:shadow-[0_0_30px_rgba(34,211,238,0.35)] transition-all"
+      className="overflow-hidden rounded-3xl border border-slate-200 bg-white/85 shadow-lg shadow-slate-200/60 backdrop-blur-lg transition-all duration-300 hover:border-cyan-400 hover:shadow-cyan-200/70 dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:shadow-[0_0_35px_rgba(34,211,238,0.35)]"
     >
       <div className="relative">
         <img src={image} alt={title} className="w-full h-56 object-cover" />
@@ -33,7 +32,7 @@ function CertificateCard({ title, issuer, year, status, image, credential }) {
 
         <p className="text-cyan-400">{issuer}</p>
 
-        <p className="text-gray-400 mt-2">{year}</p>
+        <p className="mt-2 text-slate-600 dark:text-gray-400">{year}</p>
 
         <a
           href={credential}

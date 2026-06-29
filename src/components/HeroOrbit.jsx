@@ -89,9 +89,13 @@ function HeroOrbit() {
                 flex items-center gap-3
                 px-4 py-2
                 rounded-full
-                border border-white/10
+                border border-slate-200
                 backdrop-blur-xl
-                bg-white/5
+                bg-white/80
+                shadow-sm shadow-slate-200/70
+                dark:border-white/10
+                dark:bg-white/5
+                dark:shadow-none
                 ${tech.glow}
                 hover:scale-110
                 transition-all
@@ -101,7 +105,7 @@ function HeroOrbit() {
             >
               <Icon className={`text-2xl ${tech.color}`} />
 
-              <span className="text-white font-medium text-sm whitespace-nowrap">
+              <span className="whitespace-nowrap text-sm font-medium text-slate-900 dark:text-white">
                 {tech.name}
               </span>
             </div>

@@ -33,7 +33,7 @@ function Hero() {
             <span className="text-blue-500"> Milan Harsha</span>
           </h1>
 
-          <h2 className="text-2xl text-gray-300 mt-8">
+          <h2 className="mt-8 text-2xl text-slate-700 dark:text-gray-300">
             <TypeAnimation
               sequence={[
                 "Aspiring Cloud Engineer",
@@ -52,7 +52,7 @@ function Hero() {
             />
           </h2>
 
-          <p className="mt-8 text-gray-400 leading-8">
+          <p className="mt-8 leading-8 text-slate-600 dark:text-gray-400">
             Passionate ICT undergraduate interested in Cloud Computing, DevOps,
             Full Stack Development, Docker, AWS and modern software engineering.
           </p>
@@ -63,28 +63,28 @@ function Hero() {
                 href="https://github.com/MilanAlgama"
                 target="_blank"
                 rel="noreferrer"
-                className="w-12 h-12 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] hover:-translate-y-1 transition-all duration-300"
+                className="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white/80 shadow-md shadow-slate-200/60 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:shadow-cyan-200/80 dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:shadow-[0_0_20px_rgba(34,211,238,0.5)]"
               >
-                <FaGithub className="text-2xl text-white" />
+                <FaGithub className="text-2xl text-slate-900 dark:text-white" />
               </a>
 
               <a
                 href="#"
-                className="w-12 h-12 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center hover:border-blue-500 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:-translate-y-1 transition-all duration-300"
+                className="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white/80 shadow-md shadow-slate-200/60 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:shadow-blue-200/80 dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]"
               >
                 <FaLinkedin className="text-2xl text-[#0A66C2]" />
               </a>
 
               <a
                 href="#"
-                className="w-12 h-12 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center hover:border-white hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] hover:-translate-y-1 transition-all duration-300"
+                className="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white/80 shadow-md shadow-slate-200/60 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-slate-900 hover:shadow-slate-300/80 dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:border-white dark:hover:shadow-[0_0_20px_rgba(255,255,255,0.4)]"
               >
-                <FaXTwitter className="text-2xl text-white" />
+                <FaXTwitter className="text-2xl text-slate-900 dark:text-white" />
               </a>
 
               <a
                 href="mailto:milanharsha28@gmail.com"
-                className="w-12 h-12 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center hover:border-red-500 hover:shadow-[0_0_20px_rgba(239,68,68,0.5)] hover:-translate-y-1 transition-all duration-300"
+                className="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white/80 shadow-md shadow-slate-200/60 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-red-500 hover:shadow-red-200/80 dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:shadow-[0_0_20px_rgba(239,68,68,0.5)]"
               >
                 <FaEnvelope className="text-2xl text-red-400" />
               </a>
@@ -124,7 +124,8 @@ function Hero() {
                         rounded-xl
                         border
                         border-cyan-500
-                        text-white
+                        text-blue-700
+                        dark:text-white
                         flex
                         items-center
                         gap-3

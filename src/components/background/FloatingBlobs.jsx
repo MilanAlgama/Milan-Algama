@@ -12,7 +12,7 @@ function FloatingBlobs() {
           duration: 8,
           repeat: Infinity,
         }}
-        className="fixed top-20 left-20 w-64 h-64 rounded-full bg-blue-500/20 blur-[120px] -z-40"
+        className="fixed top-20 left-20 w-64 h-64 rounded-full bg-blue-300/30 blur-[120px] -z-40 dark:bg-blue-500/20"
       />
 
       <motion.div
@@ -24,7 +24,7 @@ function FloatingBlobs() {
           duration: 10,
           repeat: Infinity,
         }}
-        className="fixed bottom-20 right-20 w-72 h-72 rounded-full bg-cyan-400/20 blur-[130px] -z-40"
+        className="fixed bottom-20 right-20 w-72 h-72 rounded-full bg-cyan-300/30 blur-[130px] -z-40 dark:bg-cyan-400/20"
       />
     </>
   );

@@ -35,7 +35,7 @@ function Contact() {
       title: "GitHub",
       value: "github.com/MilanAlgama",
       link: "https://github.com/MilanAlgama",
-      color: "text-white",
+      color: "text-slate-900 dark:text-white",
     },
     {
       icon: <FaLinkedin />,
@@ -68,7 +68,7 @@ function Contact() {
             Let's Work Together
           </h2>
 
-          <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
+          <p className="mx-auto mt-6 max-w-2xl text-slate-600 dark:text-gray-400">
             I'm always open to discussing Cloud Computing,
             DevOps, Full Stack Development and exciting
             opportunities. Feel free to contact me.
@@ -90,7 +90,7 @@ function Contact() {
                 whileHover={{
                   scale: 1.03,
                 }}
-                className="flex items-center gap-5 p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-cyan-400 hover:shadow-[0_0_25px_rgba(34,211,238,0.3)] transition"
+                className="flex items-center gap-5 rounded-2xl border border-slate-200 bg-white/85 p-6 shadow-lg shadow-slate-200/60 backdrop-blur-xl transition hover:border-cyan-400 hover:shadow-cyan-200/70 dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:shadow-[0_0_25px_rgba(34,211,238,0.3)]"
               >
                 <div className={`text-3xl ${item.color}`}>
                   {item.icon}
@@ -101,7 +101,7 @@ function Contact() {
                     {item.title}
                   </h3>
 
-                  <p className="text-gray-400">
+                  <p className="text-slate-600 dark:text-gray-400">
                     {item.value}
                   </p>
                 </div>
@@ -117,30 +117,30 @@ function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 space-y-6"
+            className="space-y-6 rounded-3xl border border-slate-200 bg-white/85 p-8 shadow-lg shadow-slate-200/60 backdrop-blur-xl dark:border-white/10 dark:bg-white/5 dark:shadow-none"
           >
 
             <input
               type="text"
               placeholder="Your Name"
-              className="w-full p-4 rounded-xl bg-black/30 border border-white/10 outline-none focus:border-cyan-400"
+              className="w-full rounded-xl border border-slate-200 bg-white/80 p-4 text-slate-950 outline-none transition focus:border-cyan-400 dark:border-white/10 dark:bg-black/30 dark:text-white"
             />
 
             <input
               type="email"
               placeholder="Your Email"
-              className="w-full p-4 rounded-xl bg-black/30 border border-white/10 outline-none focus:border-cyan-400"
+              className="w-full rounded-xl border border-slate-200 bg-white/80 p-4 text-slate-950 outline-none transition focus:border-cyan-400 dark:border-white/10 dark:bg-black/30 dark:text-white"
             />
 
             <textarea
               rows="6"
               placeholder="Your Message"
-              className="w-full p-4 rounded-xl bg-black/30 border border-white/10 outline-none focus:border-cyan-400 resize-none"
+              className="w-full resize-none rounded-xl border border-slate-200 bg-white/80 p-4 text-slate-950 outline-none transition focus:border-cyan-400 dark:border-white/10 dark:bg-black/30 dark:text-white"
             ></textarea>
 
             <button
               type="submit"
-              className="w-full py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:scale-[1.02] transition-all duration-300 font-semibold shadow-[0_0_25px_rgba(59,130,246,0.5)]"
+              className="w-full rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 py-4 font-semibold text-white shadow-lg shadow-blue-300/50 transition-all duration-300 hover:scale-[1.02] dark:shadow-[0_0_25px_rgba(59,130,246,0.5)]"
             >
               Send Message
             </button>

@@ -6,7 +6,7 @@ function Education() {
   return (
     <section
       id="education"
-      className="min-h-screen bg-[#050816] py-24 px-6"
+      className="min-h-screen bg-slate-50 px-6 py-24 transition-colors duration-300 dark:bg-[#050816]"
     >
       <div className="max-w-5xl mx-auto">
 
@@ -49,7 +49,7 @@ function Education() {
 
               </div>
 
-              <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 hover:border-blue-500 transition">
+              <div className="rounded-xl border border-slate-200 bg-white/80 p-6 shadow-lg shadow-slate-200/60 backdrop-blur-md transition hover:border-blue-500 dark:border-white/10 dark:bg-white/5 dark:shadow-none">
 
                 <h3 className="text-2xl font-semibold">
                   {item.title}
@@ -59,11 +59,11 @@ function Education() {
                   {item.institute}
                 </p>
 
-                <p className="text-sm text-gray-500 mt-1">
+                <p className="mt-1 text-sm text-slate-500 dark:text-gray-500">
                   {item.period}
                 </p>
 
-                <p className="text-gray-400 mt-4 leading-7">
+                <p className="mt-4 leading-7 text-slate-600 dark:text-gray-400">
                   {item.description}
                 </p>
 

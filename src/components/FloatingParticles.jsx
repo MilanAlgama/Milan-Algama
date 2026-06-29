@@ -27,7 +27,7 @@ function FloatingParticles() {
             duration: 3 + index,
             repeat: Infinity,
           }}
-          className="absolute w-2 h-2 rounded-full bg-cyan-400"
+          className="absolute h-2 w-2 rounded-full bg-cyan-500 dark:bg-cyan-400"
           style={particle}
         />
       ))}

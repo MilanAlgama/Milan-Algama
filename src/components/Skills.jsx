@@ -46,7 +46,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="min-h-screen bg-[#0B1120] py-24 px-6"
+      className="min-h-screen bg-white px-6 py-24 transition-colors duration-300 dark:bg-[#0B1120]"
     >
       <div className="max-w-7xl mx-auto">
 
@@ -87,7 +87,7 @@ function Skills() {
 
               viewport={{once:true}}
 
-              className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8"
+              className="rounded-2xl border border-slate-200 bg-white/80 p-8 shadow-lg shadow-slate-200/60 backdrop-blur-lg dark:border-white/10 dark:bg-white/5 dark:shadow-none"
 
             >
 
@@ -103,7 +103,7 @@ function Skills() {
 
                     key={tech}
 
-                    className="flex items-center gap-3 p-4 rounded-xl bg-[#111827] hover:bg-blue-600 transition duration-300"
+                    className="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4 transition duration-300 hover:bg-blue-600 hover:text-white dark:border-transparent dark:bg-[#111827]"
 
                   >
 

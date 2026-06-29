@@ -6,7 +6,7 @@ function Experience() {
   return (
     <section
       id="experience"
-      className="min-h-screen bg-[#050816] py-24 px-6"
+      className="min-h-screen bg-slate-50 px-6 py-24 transition-colors duration-300 dark:bg-[#050816]"
     >
       <div className="max-w-6xl mx-auto">
 
@@ -45,7 +45,7 @@ function Experience() {
 
               viewport={{ once: true }}
 
-              className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 hover:border-blue-500 hover:shadow-[0_0_40px_rgba(59,130,246,0.35)] transition-all duration-300"
+              className="rounded-3xl border border-slate-200 bg-white/80 p-8 shadow-lg shadow-slate-200/60 backdrop-blur-lg transition-all duration-300 hover:border-blue-500 hover:shadow-blue-200/70 dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:shadow-[0_0_40px_rgba(59,130,246,0.35)]"
 
             >
 
@@ -67,7 +67,7 @@ function Experience() {
 
               </div>
 
-              <div className="flex flex-wrap gap-6 mt-8 text-gray-400">
+              <div className="mt-8 flex flex-wrap gap-6 text-slate-500 dark:text-gray-400">
 
                 <div className="flex items-center gap-2">
                   <FaCalendarAlt />
@@ -81,7 +81,7 @@ function Experience() {
 
               </div>
 
-              <p className="mt-8 text-gray-300 leading-8">
+              <p className="mt-8 leading-8 text-slate-700 dark:text-gray-300">
                 {job.description}
               </p>
 
@@ -91,7 +91,7 @@ function Experience() {
 
                   <span
                     key={tech}
-                    className="px-4 py-2 rounded-full bg-blue-500/20 border border-blue-500 text-blue-300 hover:bg-blue-500 hover:text-white transition"
+                    className="rounded-full border border-blue-500 bg-blue-50 px-4 py-2 text-blue-700 transition hover:bg-blue-500 hover:text-white dark:bg-blue-500/20 dark:text-blue-300"
                   >
                     {tech}
                   </span>
