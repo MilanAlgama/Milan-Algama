@@ -100,7 +100,7 @@ function Preloader() {
             transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
           >
             <span className="text-4xl font-bold text-blue-500">
-              M<span className="text-slate-950 dark:text-white">.</span>
+              Hel<span className="text-slate-950 dark:text-white">lo!</span>
             </span>
           </motion.div>
         </motion.div>
