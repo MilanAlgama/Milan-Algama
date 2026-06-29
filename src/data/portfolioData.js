@@ -163,7 +163,7 @@ certificates: [
     issuer: "Amazon Web Services",
     year: "In Progress",
     status: "In Progress",
-    image: "/certificates/aws.png",
+    image: `${import.meta.env.BASE_URL}certificates/aws-img.webp`,
     credential: "#",
   },
   {
@@ -172,7 +172,7 @@ certificates: [
     issuer: "Udemy",
     year: "In Progress",
     status: "In Progress",
-    image: "/certificates/docker.png",
+    image: `${import.meta.env.BASE_URL}certificates/docker-img.webp`,
     credential: "#",
   },
 ],
