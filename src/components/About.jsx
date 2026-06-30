@@ -5,8 +5,10 @@ import {
   FaCloud,
   FaBriefcase,
 } from "react-icons/fa";
+import useIsMobile from "../hooks/useIsMobile";
 
 function About() {
+  const isMobile = useIsMobile();
   const cards = [
     {
       icon: <FaUserGraduate size={35} />,
@@ -42,8 +44,8 @@ function About() {
       <div className="max-w-7xl mx-auto">
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={isMobile ? false : { opacity: 0, y: 40 }}
+          whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
           className="text-center"
@@ -71,9 +73,12 @@ function About() {
 
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              initial={isMobile ? false : { opacity: 0, y: 60 }}
+              whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+              transition={{
+                duration: isMobile ? 0.2 : 0.5,
+                delay: isMobile ? 0 : index * 0.2,
+              }}
               viewport={{ once: true }}
               className="rounded-2xl border border-slate-200 bg-white/80 p-5 shadow-lg shadow-slate-200/60 backdrop-blur-md transition duration-300 hover:scale-105 hover:border-blue-500 dark:border-white/10 dark:bg-white/5 dark:shadow-none sm:p-8"
             >

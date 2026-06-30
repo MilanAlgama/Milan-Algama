@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import useIsMobile from "../hooks/useIsMobile";
 
 const particles = [
   { top: "8%", left: "20%" },
@@ -14,19 +15,30 @@ const particles = [
 ];
 
 function FloatingParticles() {
+  const isMobile = useIsMobile();
+  const visibleParticles = isMobile ? particles.slice(0, 4) : particles;
+
   return (
     <>
-      {particles.map((particle, index) => (
+      {visibleParticles.map((particle, index) => (
         <motion.div
           key={index}
-          animate={{
-            y: [0, -15, 0],
-            opacity: [0.3, 1, 0.3],
-          }}
-          transition={{
-            duration: 3 + index,
-            repeat: Infinity,
-          }}
+          animate={
+            isMobile
+              ? { opacity: 0.45 }
+              : {
+                  y: [0, -15, 0],
+                  opacity: [0.3, 1, 0.3],
+                }
+          }
+          transition={
+            isMobile
+              ? { duration: 0 }
+              : {
+                  duration: 3 + index,
+                  repeat: Infinity,
+                }
+          }
           className="absolute h-2 w-2 rounded-full bg-cyan-500 dark:bg-cyan-400"
           style={particle}
         />

@@ -6,8 +6,10 @@ import {
   FaGithub,
   FaLinkedin,
 } from "react-icons/fa";
+import useIsMobile from "../hooks/useIsMobile";
 
 function Contact() {
+  const isMobile = useIsMobile();
   const contactInfo = [
     {
       icon: <FaEnvelope />,
@@ -54,9 +56,9 @@ function Contact() {
       <div className="max-w-7xl mx-auto">
 
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
+          initial={isMobile ? false : { opacity: 0, y: 50 }}
+          whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+          transition={{ duration: isMobile ? 0.2 : 0.7 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
@@ -87,9 +89,7 @@ function Contact() {
                 href={item.link}
                 target="_blank"
                 rel="noreferrer"
-                whileHover={{
-                  scale: 1.03,
-                }}
+                whileHover={isMobile ? undefined : { scale: 1.03 }}
                 className="flex min-w-0 items-center gap-4 rounded-2xl border border-slate-200 bg-white/85 p-5 shadow-lg shadow-slate-200/60 backdrop-blur-xl transition hover:border-cyan-400 hover:shadow-cyan-200/70 dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:shadow-[0_0_25px_rgba(34,211,238,0.3)] sm:gap-5 sm:p-6"
               >
                 <div className={`text-3xl ${item.color}`}>
@@ -116,9 +116,9 @@ function Contact() {
             action="mailto:milanharsha28@gmail.com"
             method="post"
             encType="text/plain"
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
+            initial={isMobile ? false : { opacity: 0, x: 40 }}
+            whileInView={isMobile ? undefined : { opacity: 1, x: 0 }}
+            transition={{ duration: isMobile ? 0.2 : 0.7 }}
             viewport={{ once: true }}
             className="space-y-6 rounded-3xl border border-slate-200 bg-white/85 p-5 shadow-lg shadow-slate-200/60 backdrop-blur-xl dark:border-white/10 dark:bg-white/5 dark:shadow-none sm:p-8"
           >

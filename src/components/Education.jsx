@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { FaGraduationCap } from "react-icons/fa";
 import portfolioData from "../data/portfolioData";
+import useIsMobile from "../hooks/useIsMobile";
 
 function Education() {
+  const isMobile = useIsMobile();
+
   return (
     <section
       id="education"
@@ -11,8 +14,8 @@ function Education() {
       <div className="max-w-5xl mx-auto">
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={isMobile ? false : { opacity: 0, y: 40 }}
+          whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
           className="text-center"
@@ -36,9 +39,12 @@ function Education() {
 
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: -80 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              initial={isMobile ? false : { opacity: 0, x: -80 }}
+              whileInView={isMobile ? undefined : { opacity: 1, x: 0 }}
+              transition={{
+                duration: isMobile ? 0.2 : 0.5,
+                delay: isMobile ? 0 : index * 0.2,
+              }}
               viewport={{ once: true }}
               className="relative pl-12 mb-10 sm:pl-16 sm:mb-14"
             >

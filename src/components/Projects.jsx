@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import portfolioData from "../data/portfolioData";
 import ProjectCard from "./ProjectCard";
+import useIsMobile from "../hooks/useIsMobile";
 
 function Projects() {
+  const isMobile = useIsMobile();
+
   return (
     <section
       id="projects"
@@ -11,8 +14,8 @@ function Projects() {
       <div className="max-w-7xl mx-auto">
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={isMobile ? false : { opacity: 0, y: 40 }}
+          whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="text-center"

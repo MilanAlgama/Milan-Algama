@@ -1,17 +1,23 @@
 import { motion } from "framer-motion";
 import { FaAward, FaExternalLinkAlt } from "react-icons/fa";
+import useIsMobile from "../hooks/useIsMobile";
 
 function CertificateCard({ title, issuer, year, status, image, credential }) {
+  const isMobile = useIsMobile();
+
   return (
     <motion.div
-      whileHover={{
-        y: -10,
-        scale: 1.03,
-      }}
+      whileHover={isMobile ? undefined : { y: -10, scale: 1.03 }}
       className="overflow-hidden rounded-3xl border border-slate-200 bg-white/85 shadow-lg shadow-slate-200/60 backdrop-blur-lg transition-all duration-300 hover:border-cyan-400 hover:shadow-cyan-200/70 dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:shadow-[0_0_35px_rgba(34,211,238,0.35)]"
     >
       <div className="relative">
-        <img src={image} alt={title} className="h-48 w-full object-cover sm:h-56" />
+        <img
+          src={image}
+          alt={title}
+          loading="lazy"
+          decoding="async"
+          className="h-48 w-full object-cover sm:h-56"
+        />
 
         <span
           className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold ${

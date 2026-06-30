@@ -4,6 +4,7 @@ import ScrollIndicator from "./ScrollIndicator";
 import { TypeAnimation } from "react-type-animation";
 /*import { Typewriter } from "react-simple-typewriter";*/
 import { motion } from "framer-motion";
+import useIsMobile from "../hooks/useIsMobile";
 import {
   FaGithub,
   FaLinkedin,
@@ -14,6 +15,8 @@ import {
 import profile from "../assets/portfolio-img.webp";
 
 function Hero() {
+  const isMobile = useIsMobile();
+
   return (
     <section
       id="hero"
@@ -23,9 +26,9 @@ function Hero() {
         {/* Left */}
 
         <motion.div
-          initial={{ opacity: 0, x: -80 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={isMobile ? { opacity: 0 } : { opacity: 0, x: -80 }}
+          animate={isMobile ? { opacity: 1 } : { opacity: 1, x: 0 }}
+          transition={{ duration: isMobile ? 0.35 : 0.8 }}
         >
           <p className="text-sm text-blue-400 uppercase tracking-[4px] sm:text-base">//Welcome</p>
 
@@ -37,22 +40,28 @@ function Hero() {
           </h1>
 
           <h2 className="mt-6 min-h-[2.25rem] text-xl text-slate-700 dark:text-gray-300 sm:mt-8 sm:min-h-[2.5rem] sm:text-2xl">
-            <TypeAnimation
-              sequence={[
-                "Aspiring Cloud Engineer",
-                2000,
-                "DevOps Enthusiast",
-                2000,
-                "Full Stack Developer",
-                2000,
-                "Lifelong Learner",
-                2000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-              className="text-xl font-semibold text-cyan-400 sm:text-2xl"
-            />
+            {isMobile ? (
+              <span className="text-xl font-semibold text-cyan-400">
+                Aspiring Cloud Engineer
+              </span>
+            ) : (
+              <TypeAnimation
+                sequence={[
+                  "Aspiring Cloud Engineer",
+                  2000,
+                  "DevOps Enthusiast",
+                  2000,
+                  "Full Stack Developer",
+                  2000,
+                  "Lifelong Learner",
+                  2000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+                className="text-xl font-semibold text-cyan-400 sm:text-2xl"
+              />
+            )}
           </h2>
 
           <p className="mt-6 max-w-2xl leading-8 text-slate-600 dark:text-gray-400 sm:mt-8">
@@ -121,9 +130,9 @@ function Hero() {
         {/* Right */}
 
         <motion.div
-          initial={{ opacity: 0, x: 80 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={isMobile ? { opacity: 0 } : { opacity: 0, x: 80 }}
+          animate={isMobile ? { opacity: 1 } : { opacity: 1, x: 0 }}
+          transition={{ duration: isMobile ? 0.35 : 0.8 }}
           className="flex justify-center lg:justify-end"
         >
           <div className="relative mx-auto flex aspect-square w-[clamp(18rem,88vw,32.5rem)] items-center justify-center overflow-visible lg:mx-0">
@@ -131,13 +140,15 @@ function Hero() {
             <HeroOrbit />
             <FloatingParticles />
             <>
-              <div className="absolute h-60 w-60 rounded-full bg-blue-500/20 blur-3xl animate-pulse sm:h-80 sm:w-80 md:h-96 md:w-96"></div>
+              <div className="absolute h-60 w-60 rounded-full bg-blue-500/20 blur-3xl motion-safe:animate-pulse sm:h-80 sm:w-80 md:h-96 md:w-96"></div>
 
-              <div className="absolute h-52 w-52 rounded-full bg-cyan-500/20 blur-2xl animate-ping opacity-20 sm:h-72 sm:w-72 md:h-80 md:w-80"></div>
+              <div className="absolute h-52 w-52 rounded-full bg-cyan-500/20 blur-2xl motion-safe:animate-ping opacity-20 sm:h-72 sm:w-72 md:h-80 md:w-80"></div>
             </>
             <img
               src={profile}
               alt="Milan Harsha"
+              fetchPriority="high"
+              decoding="async"
               className="
               relative
               z-10

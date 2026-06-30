@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import portfolioData from "../data/portfolioData";
+import useIsMobile from "../hooks/useIsMobile";
 
 import {
   FaJava,
@@ -43,6 +44,8 @@ const icons = {
 };
 
 function Skills() {
+  const isMobile = useIsMobile();
+
   return (
     <section
       id="skills"
@@ -51,8 +54,8 @@ function Skills() {
       <div className="max-w-7xl mx-auto">
 
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={isMobile ? false : { opacity: 0 }}
+          whileInView={isMobile ? undefined : { opacity: 1 }}
           transition={{ duration: .7 }}
           viewport={{ once: true }}
           className="text-center"
@@ -76,13 +79,13 @@ function Skills() {
 
               key={index}
 
-              initial={{opacity:0,y:50}}
+              initial={isMobile ? false : {opacity:0,y:50}}
 
-              whileInView={{opacity:1,y:0}}
+              whileInView={isMobile ? undefined : {opacity:1,y:0}}
 
               transition={{
-                duration:.5,
-                delay:index*.15
+                duration: isMobile ? .2 : .5,
+                delay: isMobile ? 0 : index*.15
               }}
 
               viewport={{once:true}}

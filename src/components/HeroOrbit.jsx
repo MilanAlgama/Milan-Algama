@@ -7,6 +7,7 @@ import {
   FaPython,
   FaJava,
 } from "react-icons/fa";
+import useIsMobile from "../hooks/useIsMobile";
 
 const technologies = [
   {
@@ -60,6 +61,8 @@ const technologies = [
 ];
 
 function HeroOrbit() {
+  const isMobile = useIsMobile();
+
   return (
     <>
       {technologies.map((tech, index) => {
@@ -74,15 +77,16 @@ function HeroOrbit() {
               left: tech.left,
               transform: "translate(-50%, -50%)",
             }}
-            animate={{
-              y: [0, -12, 0],
-              x: [0, 6, 0],
-            }}
-            transition={{
-              duration: 5 + index,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
+            animate={isMobile ? undefined : { y: [0, -12, 0], x: [0, 6, 0] }}
+            transition={
+              isMobile
+                ? undefined
+                : {
+                    duration: 5 + index,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }
+            }
           >
             <div
               className={`

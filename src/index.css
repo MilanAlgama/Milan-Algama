@@ -28,3 +28,36 @@ body {
 :where(button:disabled, [aria-disabled="true"]) {
   cursor: not-allowed;
 }
+
+@media (max-width: 767px) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  [class*="backdrop-blur"] {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  [class*="blur-"],
+  [class*="blur\\["] {
+    filter: none !important;
+  }
+
+  [class*="shadow"] {
+    box-shadow: none !important;
+  }
+
+  .animate-ping,
+  .animate-pulse {
+    animation: none !important;
+  }
+
+  :where(a, button, [role="button"], [class*="transition"]) {
+    transition-duration: 150ms !important;
+  }
+}

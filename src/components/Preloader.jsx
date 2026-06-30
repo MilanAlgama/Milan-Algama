@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FaAws, FaDocker, FaReact } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
+import useIsMobile from "../hooks/useIsMobile";
 
 const loaderTech = [
   {
@@ -30,6 +31,8 @@ const loaderTech = [
 ];
 
 function Preloader() {
+  const isMobile = useIsMobile();
+
   return (
     <motion.div
       aria-label="Loading portfolio"
@@ -37,17 +40,21 @@ function Preloader() {
       initial={{ opacity: 1 }}
       exit={{
         opacity: 0,
-        scale: 1.03,
-        filter: "blur(10px)",
+        scale: isMobile ? 1 : 1.03,
+        filter: isMobile ? "blur(0px)" : "blur(10px)",
       }}
-      transition={{ duration: 0.65, ease: "easeInOut" }}
+      transition={{ duration: isMobile ? 0.3 : 0.65, ease: "easeInOut" }}
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(59,130,246,0.24),transparent_34%),radial-gradient(circle_at_75%_70%,rgba(34,211,238,0.22),transparent_32%),radial-gradient(circle_at_50%_50%,rgba(168,85,247,0.12),transparent_36%)]" />
 
       <motion.div
         className="absolute h-[28rem] w-[28rem] rounded-full border border-cyan-400/10"
-        animate={{ rotate: 360 }}
-        transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+        animate={isMobile ? undefined : { rotate: 360 }}
+        transition={
+          isMobile
+            ? undefined
+            : { duration: 18, repeat: Infinity, ease: "linear" }
+        }
       />
 
       <div className="relative flex flex-col items-center px-6 text-center">
@@ -59,27 +66,43 @@ function Preloader() {
         >
           <motion.div
             className="absolute inset-0 rounded-full border border-blue-400/25 shadow-[0_0_80px_rgba(59,130,246,0.25)]"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+            animate={isMobile ? undefined : { rotate: 360 }}
+            transition={
+              isMobile
+                ? undefined
+                : { duration: 10, repeat: Infinity, ease: "linear" }
+            }
           />
 
           <motion.div
             className="absolute inset-8 rounded-full border border-dashed border-cyan-300/35"
-            animate={{ rotate: -360 }}
-            transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
+            animate={isMobile ? undefined : { rotate: -360 }}
+            transition={
+              isMobile
+                ? undefined
+                : { duration: 14, repeat: Infinity, ease: "linear" }
+            }
           />
 
           {loaderTech.map(({ label, Icon, className, delay }) => (
             <motion.div
               key={label}
               className={`absolute ${className}`}
-              animate={{ y: [0, -8, 0], opacity: [0.65, 1, 0.65] }}
-              transition={{
-                duration: 2.4,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay,
-              }}
+              animate={
+                isMobile
+                  ? { opacity: 0.85 }
+                  : { y: [0, -8, 0], opacity: [0.65, 1, 0.65] }
+              }
+              transition={
+                isMobile
+                  ? { duration: 0 }
+                  : {
+                      duration: 2.4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay,
+                    }
+              }
             >
               <div className="rounded-2xl border border-white/15 bg-white/80 p-3 shadow-lg shadow-blue-200/60 backdrop-blur-xl dark:bg-white/10 dark:shadow-none">
                 <Icon className="text-2xl" aria-hidden="true" />
@@ -90,14 +113,22 @@ function Preloader() {
 
           <motion.div
             className="grid h-28 w-28 place-items-center rounded-full border border-cyan-300/40 bg-white/85 shadow-[0_0_70px_rgba(34,211,238,0.35)] backdrop-blur-xl dark:bg-[#050816]/85"
-            animate={{
-              boxShadow: [
-                "0 0 42px rgba(34,211,238,0.22)",
-                "0 0 78px rgba(59,130,246,0.46)",
-                "0 0 42px rgba(34,211,238,0.22)",
-              ],
-            }}
-            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+            animate={
+              isMobile
+                ? undefined
+                : {
+                    boxShadow: [
+                      "0 0 42px rgba(34,211,238,0.22)",
+                      "0 0 78px rgba(59,130,246,0.46)",
+                      "0 0 42px rgba(34,211,238,0.22)",
+                    ],
+                  }
+            }
+            transition={
+              isMobile
+                ? undefined
+                : { duration: 2.2, repeat: Infinity, ease: "easeInOut" }
+            }
           >
             <span className="text-4xl font-bold text-blue-500">
               Hel<span className="text-slate-950 dark:text-white">lo!</span>

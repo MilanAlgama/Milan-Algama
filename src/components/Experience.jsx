@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { FaBriefcase, FaCalendarAlt, FaLocationArrow } from "react-icons/fa";
 import portfolioData from "../data/portfolioData";
+import useIsMobile from "../hooks/useIsMobile";
 
 function Experience() {
+  const isMobile = useIsMobile();
+
   return (
     <section
       id="experience"
@@ -11,8 +14,8 @@ function Experience() {
       <div className="max-w-6xl mx-auto">
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={isMobile ? false : { opacity: 0, y: 40 }}
+          whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: .6 }}
           viewport={{ once: true }}
           className="text-center"
@@ -34,13 +37,13 @@ function Experience() {
 
               key={index}
 
-              initial={{ opacity: 0, y: 60 }}
+              initial={isMobile ? false : { opacity: 0, y: 60 }}
 
-              whileInView={{ opacity: 1, y: 0 }}
+              whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
 
               transition={{
-                duration: .6,
-                delay: index * .2
+                duration: isMobile ? .2 : .6,
+                delay: isMobile ? 0 : index * .2
               }}
 
               viewport={{ once: true }}

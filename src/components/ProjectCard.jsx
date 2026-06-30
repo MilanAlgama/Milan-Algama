@@ -14,6 +14,7 @@ import {
   SiTailwindcss,
   SiGooglecloud,
 } from "react-icons/si";
+import useIsMobile from "../hooks/useIsMobile";
 
 /*import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";*/
 
@@ -47,9 +48,11 @@ function ProjectCard({
   github,
   image,
 }) {
+  const isMobile = useIsMobile();
+
   return (
     <motion.div
-      whileHover={{ y: -8, scale: 1.02 }}
+      whileHover={isMobile ? undefined : { y: -8, scale: 1.02 }}
       transition={{ duration: 0.3 }}
       className="overflow-hidden rounded-3xl border border-slate-200 bg-white/85 shadow-lg shadow-slate-200/60 backdrop-blur-lg transition-all hover:border-blue-500 hover:shadow-blue-200/70 dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:shadow-[0_0_35px_rgba(59,130,246,0.35)]"
     >
@@ -59,6 +62,8 @@ function ProjectCard({
         <img
           src={image}
           alt={title}
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover transition duration-500 hover:scale-110"
         />
 
