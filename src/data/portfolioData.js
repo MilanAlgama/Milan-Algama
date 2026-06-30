@@ -145,6 +145,30 @@ projects: [
 
     featured: true,
   },
+
+  {
+    id: 3,
+
+    title: "Portfolio Website",
+
+    subtitle: "Personal Portfolio Website",
+
+    description:
+      "A responsive personal portfolio website built to showcase my projects, skills, education, certificates and contact information with a modern user interface.",
+
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "JavaScript",
+    ],
+
+    github:
+      "https://github.com/MilanAlgama/Milan-Algama",
+
+    image: `${import.meta.env.BASE_URL}Projects/portfolio-ui.webp`,
+
+    featured: true,
+  },
 ],
 
 certificates: [
